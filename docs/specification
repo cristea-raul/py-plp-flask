@@ -1,0 +1,28 @@
+doctype: Document.v1
+{
+    title: <string>, # optional
+    description: <string>, # optional
+    error: <string>, # optional
+
+    questions: [<Question>], # optional
+
+    submit: <Action>, # optional
+
+    actions: [<Action>], # optional
+}
+
+Element: Question
+{
+    'title': <string>,
+    'code': <string>, # optional
+    'type': {choice, multi, text, code, hidden}
+    'choices': [<string>], # only for choice, multi
+    'error': <string>,
+}
+
+Element: Action
+{
+    'title': <string>,
+    'type': {get, post},
+    'href': <string>, # URL
+}
